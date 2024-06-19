@@ -37,10 +37,8 @@ export class VideoEditingOptionsComponent implements OnInit {
   }
 
   applySlowMotion() {
-    debugger
     if (this.videoFile) {
       this.videoEditingService.applySlowMotion(this.videoFile).then(editedFile => {
-        debugger
         // Handle the edited file
       });
     }

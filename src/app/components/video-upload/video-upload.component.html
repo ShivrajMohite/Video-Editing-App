@@ -1,0 +1,58 @@
+<!-- <input type="file" (change)="onFileSelected($event)" accept="video/*"> -->
+<div class="row mb-5">
+    <div class="col-md-8">
+        <div class="input-group">
+            <input type="file" class="form-control" (change)="onFileSelected($event)" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="video/*">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="download-div float-end">
+            <button class="btn" (click)="downloadVideo()" [disabled]="!videoUrl">Download Video</button>
+        </div>
+    </div>
+</div>
+
+<div class="card" *ngIf="!videoUrl">
+    <div class="card-body p-5">
+        <p>
+            <span>
+                <img src="assets/no-video.svg" class="dot"/>
+            </span>
+            
+        </p>
+        <p class="c2">
+            No video found!
+        </p>
+        <p class="c1">
+            Please select a video
+        </p>
+    </div>
+</div>
+<video #videoPlayer controls *ngIf="videoUrl" [src]="videoUrl"></video>
+
+<div class="btn-div mt-3">
+    <button class="btn me-3" (click)="applySlowMotion()" 
+    [ngClass]="{'activeBtn': isSlowMotion, 'deactiveBtn': !isSlowMotion, 'disabled': !videoUrl}" 
+    [disabled]="!videoUrl">Slow Motion</button>
+    <button class="btn ms-3" (click)="applyNormalView()" 
+    [ngClass]="{'activeBtn': !isSlowMotion, 'deactiveBtn': isSlowMotion, 'disabled': !videoUrl}" 
+    [disabled]="!videoUrl">Normal View</button>
+</div>
+
+
+<div class="trim-div row mt-3">
+    <div class="col">
+        <label for="startTime" class="form-label">Start Time:</label>
+        <input type="number" class="form-control" id="startTime" [(ngModel)]="startTime" step="0.01" (input)="checkTimes()">
+    </div>
+    <div class="col">
+        <label for="endTime" class="form-label">End Time:</label>
+        <input type="number" class="form-control" id="endTime" [(ngModel)]="endTime" step="0.01" (input)="checkTimes()">
+    </div>
+    <div class="col">
+        <p class="mb-0 mt-30">
+            <button class="btn" (click)="trimVideo()" [ngClass]="{'activeBtn': isButtonEnabled, 'deactiveBtn': !isButtonEnabled}" 
+            [disabled]="!isButtonEnabled">Trim Video</button>
+        </p>
+    </div>
+</div>

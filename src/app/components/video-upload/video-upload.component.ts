@@ -21,6 +21,7 @@ export class VideoUploadComponent implements OnInit {
   startTime = 0;
   endTime = 0;
   public fileName: string = '';
+  isButtonEnabled: boolean = false;
 
   constructor(
     private videoEditingService: VideoEditingService,
@@ -39,7 +40,8 @@ export class VideoUploadComponent implements OnInit {
 
   onFileSelected(event: any) {
     const file = event.target.files[0];
-    this.fileName = file.name;
+    if (file) {
+      this.fileName = file.name;
     
     const reader = new FileReader();
     this.videoSelected.emit(file);
@@ -49,6 +51,10 @@ export class VideoUploadComponent implements OnInit {
     };
 
     reader.readAsDataURL(file);
+    } else {
+      this.videoUrl = null;
+    }
+    
   }
 
   applySlowMotion(): void {
@@ -67,6 +73,10 @@ export class VideoUploadComponent implements OnInit {
       videoElement.play(); // Restart the video to see the effect immediately
       this.isSlowMotion = false;
     }
+  }
+
+  checkTimes(): void {
+    this.isButtonEnabled = this.startTime > 0 && this.endTime > 0 && this.endTime > this.startTime;
   }
 
   trimVideo(): void {

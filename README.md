@@ -53,10 +53,6 @@ https://github.com/ShivrajMohite/Video-Editing-App/assets/34600724/42a95195-4e8e
   </li>
 </ul>
 
-## Conclusion
-Despite some challenges, the project demonstrates core functionalities such as video trimming and applying slow-motion effects. I look forward to further discussions and feedback.
-
-
 
 
 

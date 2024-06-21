@@ -17,6 +17,18 @@ The application is deployed using Vercel. You can access the deployed applicatio
   <li><strong> Video Download:</strong> Edited videos can be downloaded as MP4 files.</li>
 </ul>
 
+## Screenshots -
+### Home Page
+![Screenshot 2024-06-21 at 11 52 44 AM](https://github.com/ShivrajMohite/Video-Editing-App/assets/34600724/0feb7b19-3cff-409e-8ede-9aee331051b7)
+
+## Upload Video
+![Screenshot 2024-06-21 at 11 53 15 AM](https://github.com/ShivrajMohite/Video-Editing-App/assets/34600724/e8187222-0818-4f73-b395-c1dbadf70c7f)
+
+## Video -
+https://github.com/ShivrajMohite/Video-Editing-App/assets/34600724/42a95195-4e8e-4a6f-9ca6-cd6d8c1e1036
+
+
+
 ## Challenges and Resolutions
 ### API Integration
 <ul>

@@ -39,7 +39,7 @@ https://github.com/ShivrajMohite/Video-Editing-App/assets/34600724/42a95195-4e8e
     <strong>Resolution:</strong> The paid API restricted its usage in the project. Therefore, the background removal feature could not be fully implemented.
   </li>
   <li>
-    <strong>API Reference:</strong> I attempted to integrate the Unscreen API for background removal. However, due to its paid nature, it was not feasible to include it in the project. You can refer to the API documentation here <a href="https://vercel.com/">vercel</a>.
+    <strong>API Reference:</strong> I attempted to integrate the <strong>Unscreen API</strong> for background removal. However, due to its paid nature, it was not feasible to include it in the project. You can refer to the API documentation here <a href="https://vercel.com/">vercel</a>.
   </li>
 </ul>
 
